@@ -1,0 +1,10 @@
+{
+    "name": "4geeksacademy/bootcamp-comparison",
+    "type": "project",
+    "require": {
+        "slim/slim": "^3.0",
+        "monolog/monolog": "^1.23",
+        "respect/validation": "^1.1",
+        "glicer/link-checker": "dev-master"
+    }
+}

@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule compare/(.*)-vs-(.*)-vs-(.*) /comparison.php?school1=$1&school2=$2&school3=$3 [L]
+</IfModule>

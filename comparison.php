@@ -1,4 +1,5 @@
 <?php 
+    require('./globals.php');
     $school1 = $_GET['school1'];
     $school2 = $_GET['school2'];
     $school3 = $_GET['school3'];
@@ -8,16 +9,16 @@
     $slug4Geeks = $_GET['school3'];
 
     //Imagenes para cada curso
-    $imgSchool3 = 'https://assets-alesanchezr.c9users.io/apis/course-report/logos/'.$school3.'.png';
-    $imgSchool2 = 'https://assets-alesanchezr.c9users.io/apis/course-report/logos/'.$school2.'.png';
-    $imgSchool1 = 'https://assets-alesanchezr.c9users.io/apis/course-report/logos/'.$school1.'.png';
+    $imgSchool3 = API_URL.'/logos/'.$school3.'.png';
+    $imgSchool2 = API_URL.'/logos/'.$school2.'.png';
+    $imgSchool1 = API_URL.'/logos/'.$school1.'.png';
 ?>
 <html>
     <head>
         <title>Rafael</title>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation">
@@ -99,10 +100,9 @@
                                 <select id="select2" class="custom-select" onchange="change()">
                                     <option selected><?php echo $school2?></option>
                                     <?php
-                                        $url = 'https://assets-alesanchezr.c9users.io/apis/course-report/schools';
+                                        $url = API_URL.'/schools';
                                         $schools = file_get_contents($url);
                                         $dataSchools = json_decode($schools);
-
                                         foreach($dataSchools as $key => $com){
                                             if($key != '4geeks' && $key != $school2 && $key != $school1) {?>
                                                 <option value="<?php echo $key?>"><?php echo $key?></option>
@@ -122,7 +122,7 @@
                                 <select id="select1" class="custom-select" onchange="change()">
                                     <option selected><?php echo $school1?></option>
                                     <?php
-                                        $url = 'https://assets-alesanchezr.c9users.io/apis/course-report/schools';
+                                        $url = API_URL.'/schools';
                                         $schools = file_get_contents($url);
                                         $dataSchools = json_decode($schools);
 
@@ -158,7 +158,7 @@
                         </td>
                     </tr>
                     <?php
-                        $url = 'https://assets-alesanchezr.c9users.io/apis/course-report/compare/full-stack?schools='.$school1.','.$school2.','.$school3;
+                        $url = API_URL.'/compare/full-stack?schools='.$school1.','.$school2.','.$school3;
                         $dataComparison = file_get_contents($url);
                         $comparisonCombinationArray = json_decode($dataComparison);
                     ?>
