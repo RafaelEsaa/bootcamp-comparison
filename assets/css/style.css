@@ -1,3 +1,6 @@
+.logo {
+  width: 70px; }
+
 .full-width {
   margin: 0px !important;
   width: 100%; }
@@ -293,8 +296,7 @@ form {
     top: -30px;
     background-color: red;
     border-radius: 10px;
-    padding-left: 10px;
-    font-size: 10px; }
+    padding-left: 10px; }
 
 * {
   box-sizing: border-box;
@@ -313,6 +315,7 @@ article {
   display: flex;
   top: 0px;
   z-index: 10;
+  background-color: white;
   margin: 0px; }
   .menu-table-mobile li {
     list-style: none;
@@ -425,7 +428,7 @@ td.default {
     background-size: contain;
     background-repeat: no-repeat;
     margin: 0 auto;
-    min-width: 110px;
+    min-width: 90px;
     min-height: 110px;
     background-position: center center; }
 
@@ -440,14 +443,14 @@ td.default {
     background-size: contain;
     background-repeat: no-repeat;
     margin: 0 auto;
-    min-width: 110px;
+    min-width: 90px;
     min-height: 110px;
     background-position: center center; }
   .bg-other-school .img-four-table {
     background-size: contain;
     background-repeat: no-repeat;
     margin: 0 auto;
-    min-width: 110px;
+    min-width: 90px;
     min-height: 110px;
     background-position: center center; }
 
@@ -535,6 +538,10 @@ td.default {
     font-size: 12px;
     border-radius: 20px; }
 
+@media (max-width: 740px) {
+  ul .active {
+    background-color: rgba(192, 192, 192, 0.5); } }
+
 .span-columns {
   width: 50%; }
   .span-columns p {
@@ -601,4 +608,5 @@ td.default {
     bottom: 0;
     border-bottom: 2px solid grey;
     width: 100%;
-    padding-bottom: 7px; }
+    padding-bottom: 7px;
+    text-transform: capitalize; }
