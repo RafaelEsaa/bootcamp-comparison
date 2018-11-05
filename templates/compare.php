@@ -36,8 +36,11 @@
 
     <!-- DIRTY Responsive pricing table HTML -->
 
-<article class="table">
+<div class="row full-width">
+    <div class="col-md-12 table">
 
+
+<article class="">
 <!-- Menu Mobile -->
 <ul class="menu-table-mobile">
     <li id="<?php echo "li-".$school1; ?>">
@@ -196,7 +199,7 @@
         <tr>
             <td class="bg-grey first-col">
                 <div class="menu-title">
-                    <p>Price</p>
+                    <p class="title">Price</p>
                 </div>
             </td>
                 <?php foreach($comparisonCombinationArray as $key => $com){ 
@@ -250,7 +253,7 @@
         <tr>
             <td class="bg-grey">
                 <div class="menu-title">
-                    <p>Focus</p>
+                    <p class="title">Focus</p>
                 </div>
             </td>
             <td class="">
@@ -320,7 +323,7 @@
         <tr>
             <td class="bg-grey">
                 <div class="menu-title">
-                    <p>Time commitment</p>
+                    <p class="title">Time commitment</p>
                 </div>
             </td>
             <?php foreach($comparisonCombinationArray as $key => $com){
@@ -368,7 +371,7 @@
         <tr>
             <td class="bg-grey">
                 <div class="menu-title">
-                    <p>Learning Style</p>
+                    <p class="title">Learning Style</p>
                 </div>
             </td>
 
@@ -471,7 +474,7 @@
         <tr>
             <td class="bg-grey">
                 <div class="menu-title">
-                    <p>Online Platform</p>
+                    <p class="title">Online Platform</p>
                 </div>
             </td>
             
@@ -547,7 +550,7 @@
         <tr>
             <td class="bg-grey">
                 <div class="menu-title">
-                    <p>Syllabus</p>
+                    <p class="title">Syllabus</p>
                 </div>
             </td>
             
@@ -659,7 +662,7 @@
         <tr>
             <td class="bg-grey">
                 <div class="menu-title">
-                    <p>Mentors</p>
+                    <p class="title">Mentors</p>
                 </div>
             </td>
             <td class="bg-white">
@@ -713,7 +716,7 @@
         <tr>
             <td class="bg-grey">
                 <div class="menu-title">
-                    <p>Job guarantee</p>
+                    <p class="title">Job guarantee</p>
                 </div>
             </td>
             <td class="">
@@ -783,7 +786,7 @@
         <tr>
             <td class="bg-grey">
                 <div class="menu-title">
-                    <p>Placement rate</p>
+                    <p class="title">Placement rate</p>
                 </div>
             </td>
             <td class="bg-white">
@@ -823,7 +826,7 @@
         <tr>
             <td class="bg-grey">
                 <div class="menu-title">
-                    <p>Post graduate support</p>
+                    <p class="title">Post graduate support</p>
                 </div>
             </td>
             <td class="">
@@ -875,7 +878,7 @@
         <tr>
             <td class="bg-grey">
                 <div class="menu-title">
-                    <p>Pre Work</p>
+                    <p class="title">Pre Work</p>
                 </div>
             </td>
             <td class="">
@@ -947,7 +950,7 @@
         <tr>
             <td class="bg-grey">
                 <div class="menu-title">
-                    <p>Scolarships</p>
+                    <p class="title">Scolarships</p>
                 </div>
             </td>
             <td>
@@ -1029,7 +1032,7 @@
         <tr>
             <td class="bg-grey">
                 <div class="menu-title">
-                    <p>Application process</p>
+                    <p class="title">Application process</p>
                 </div>
             </td>
             <td class="bg-white">
@@ -1129,7 +1132,7 @@
         <tr>
             <td class="bg-grey">
                 <div class="menu-title">
-                    <p>Reviews</p>
+                    <p class="title">Reviews</p>
                 </div>
             </td>
             <td>
@@ -1249,22 +1252,6 @@
 </table>
   
 </article>
-
-    <script>            
-        // window.onload = function(){
-        //     let x = document.querySelectorAll("tr td:nth-child(3)");
-        //     let y = document.querySelectorAll("tr td:first-child");
-
-        //     let i;
-        //     for (i = 0; i < x.length; i++) {
-        //         y[i].style.height = x[i].offsetHeight;
-        //     }
-        // }
-
-        // function change(){
-        //     let bootcamp1 = document.getElementById("select1");
-        //     let bootcamp2 = document.getElementById("select2");
-        //     window.location.href = "?page=compare&school1=4geeks&school2="+bootcamp1.value+"&school3="+bootcamp2.value;
-        // }
-    </script>
+</div>
+</div>
 <?php require('footer.php') ?>

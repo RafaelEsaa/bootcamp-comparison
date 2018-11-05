@@ -106,7 +106,7 @@ function bootcampsSelected(id) {
     //Valida que existan 2 opciones marcadas para hacer la peticion a la nueva pagina
     ids.push(id);
     if(ids.length > 1){
-      window.location.href = "?page=compare&school1=4geeks&school2="+ids[0]+"&school3="+ids[1];
+      window.location.href = "compare/4geeks-vs-"+ids[0]+"-vs-"+ids[1];
     }
 
     //Se oculta el texto en rojo

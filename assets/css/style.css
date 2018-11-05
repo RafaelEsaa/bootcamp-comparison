@@ -8,6 +8,9 @@
 .no-margin {
   margin: 0px; }
 
+.no-padding {
+  padding: 0px; }
+
 p {
   margin: 0px; }
 
@@ -308,7 +311,6 @@ article {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  height: 1000px;
   position: relative; }
 
 .menu-table-mobile {
@@ -579,11 +581,7 @@ td.default {
       font-size: 20px; } }
 
 .table {
-  margin-top: 100px;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  top: 51%;
+  margin-top: -220px;
   width: 1100px; }
 
 .table td, th {
@@ -603,10 +601,30 @@ td.default {
 
 .menu-title {
   position: relative; }
-  .menu-title p {
+  .menu-title .title {
     position: absolute;
     bottom: 0;
     border-bottom: 2px solid grey;
     width: 100%;
     padding-bottom: 7px;
     text-transform: capitalize; }
+  .menu-title p {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 7px;
+    text-transform: capitalize; }
+
+.footer {
+  background-color: #bdbec0;
+  margin-top: 90px !important; }
+  .footer .bootcamps {
+    padding-top: 25px;
+    padding-bottom: 25px; }
+    .footer .bootcamps .title {
+      font-size: 22px;
+      padding: 20px 0px; }
+    .footer .bootcamps .permute {
+      color: black;
+      cursor: pointer;
+      text-transform: capitalize; }
