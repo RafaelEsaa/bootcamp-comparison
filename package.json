@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "node-sass --include-path scss scss/style.scss ./assets/css/style.css",
-    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+    "build": "gulp build",
+    "dev": "gulp dev",
+    "watch": "gulp watch"
   },
   "author": "",
   "license": "ISC",
@@ -14,5 +15,10 @@
     "node-sass": "^4.9.2",
     "nodemon": "^1.18.3",
     "scss-compile": "^0.1.7"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-sass": "^4.0.2"
   }
 }
