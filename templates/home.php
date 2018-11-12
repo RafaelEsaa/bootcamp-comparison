@@ -28,35 +28,31 @@
         <div class="container">
             <div class="row grid-home">
                 <?php
-                $dataSchools = file_get_contents('https://bootcamp-comparison-rafaelesaa.c9users.io/api/schools');
+                $dataSchools = file_get_contents(API_URL.'api/schools');
                 $schools = json_decode($dataSchools);
                 $i = 0;
                 foreach($schools as $com){
-                    $i++;
-                    if($i%2 == 0){?>
+                    $i++;?>
+                    <?php if($i%2 == 0){?>
 
-                    <div class="col-lg-3 col-md-3 bg-blue-home" id="<?php echo $com->slug?>">
-                        <p style="visibility:hidden;">Seleccione la segunda opción</p>
-                        <div class="img-grid-compare" style="background-image: url('https://bootcamp-comparison-rafaelesaa.c9users.io/api/logos/<?php echo $com->slug?>.png');">
+                    <div id="<?php echo $com->slug?>" class="col-lg-3 col-md-3 col-6 bg-blue-home" data-target="<?php echo $com->slug?>" onclick="bootcampsSelected(this)">
+                        <p class="text-select" style="visibility:hidden;">Seleccione la segunda opción</p>
+                        <h2 class="title-bootcamp text-center"><?php echo $com->title?></h2>
+                        <div class="img-grid-compare" style="background-image: url('<?php API_URL?>api/logos/<?php echo $com->slug?>.png');">
                         </div>
                         <span>
-                            <button class="btn-left">see more</button>
-                        </span>
-                        <span>
-                            <button class="btn-right" id="<?php echo $com->slug?>" onclick="bootcampsSelected(this.id)">compare</button>
+                            <button class="text-center w-100 btn-right">compare</button>
                         </span>
                     </div>
 
                     <?php }else{?>
-                        <div class="col-lg-3 col-md-3 bg-white-home" id="<?php echo $com->slug?>">
-                        <p style="visibility: hidden;">Seleccione la segunda opción</p>
-                        <div class="img-grid-compare" style="background-image: url('https://bootcamp-comparison-rafaelesaa.c9users.io/api/logos/<?php echo $com->slug?>.png');">
+                        <div id="<?php echo $com->slug?>" class="col-lg-3 col-md-3 col-6 bg-white-home" data-target="<?php echo $com->slug?>" onclick="bootcampsSelected(this)">
+                        <p class="text-select" style="visibility: hidden;">Seleccione la segunda opción</p>
+                        <h2 class="title-bootcamp text-center"><?php echo $com->title?></h2>
+                        <div class="img-grid-compare" style="background-image: url('<?php API_URL?>api/logos/<?php echo $com->slug?>.png');">
                             </div>
                             <span>
-                                <button class="btn-left">see more</button>
-                            </span>
-                            <span>
-                                <button id="<?php echo $com->slug?>" onclick="bootcampsSelected(this.id)" class="btn-right">compare</button>
+                                <button class="text-center w-100 btn-right">compare</button>
                             </span>
                         </div>
                     <?php }?>

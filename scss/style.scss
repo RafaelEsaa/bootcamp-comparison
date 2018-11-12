@@ -8,7 +8,7 @@
 }
 
 .no-margin{
-    margin: 0px;
+    margin: 0px;    
 }
 
 .no-padding{
@@ -205,8 +205,16 @@ form{
     margin-top: -100px;
     .bg-white-home{
         background-color: white;
-        padding: 60px 20px 10px 20px;
+        padding: 3vw 20px 2vw 20px;
         border: 1px solid #8888;
+        .text-select{
+            position: relative;
+            top: 0px;
+        }
+        h2{
+            padding-bottom: 20px;
+            font-size: 14px;
+        }
         .img-grid-compare{
             background-size: contain;
             background-repeat: no-repeat;
@@ -218,22 +226,29 @@ form{
         .btn-left{
             background: black;
             color: white;
-            font-size: 11px;
+            font-size: 13px;
             text-transform: uppercase;
             border-radius: 11px;
             padding: 3px 10px;
             float: left;
             border: none;
+            &:focus{
+                outline: 0;
+            }
         }
         .btn-right{
             background: black;
             color: white;
-            font-size: 11px;
+            font-size: 13px;
             text-transform: uppercase;
             border-radius: 11px;
             padding: 3px 10px;
             float: right;
             border: none;
+            cursor: pointer;
+            &:focus{
+                outline: 0;
+            }
         }
         @media only screen and (max-width: 992px) {
             .btn-left{
@@ -245,6 +260,9 @@ form{
                 padding: 3px 10px;
                 float: left;
                 border: none;
+                &:focus{
+                    outline: 0;
+                }
             }
             .btn-right{
                 background: black;
@@ -255,6 +273,9 @@ form{
                 padding: 3px 10px;
                 float: right;
                 border: none;
+                &:focus{
+                    outline: 0;
+                }
             }
         }
         @media only screen and (max-width: 768px) {
@@ -267,6 +288,9 @@ form{
                 padding: 3px 10px;
                 float: left;
                 border: none;
+                &:focus{
+                    outline: 0;
+                }
             }
             .btn-right{
                 background: black;
@@ -277,13 +301,24 @@ form{
                 padding: 3px 10px;
                 float: right;
                 border: none;
+                &:focus{
+                    outline: 0;
+                }
             }
         }
     }
     .bg-blue-home{
-        padding: 60px 20px 10px 20px;
+        padding: 3vw 20px 2vw 20px;
         background-color: #27aae2;
         border: 1px solid #8888;
+        h2{
+            padding-bottom: 20px;
+            font-size: 14px;
+        }
+        .text-select{
+            position: relative;
+            top: 0px;
+        }
         .img-grid-compare{
             background-size: contain;
             background-repeat: no-repeat;
@@ -295,22 +330,30 @@ form{
         .btn-left{
             background: black;
             color: white;
-            font-size: 11px;
+            font-size: 13px;
             text-transform: uppercase;
             border-radius: 11px;
             padding: 3px 10px;
             float: left;
             border: none;
+            cursor: pointer;
+            &:focus{
+                outline: 0;
+            }
         }
         .btn-right{
             background: black;
             color: white;
-            font-size: 11px;
+            font-size: 13px;
             text-transform: uppercase;
             border-radius: 11px;
             padding: 3px 10px;
             float: right;
             border: none;
+            cursor: pointer;
+            &:focus{
+                outline: 0;
+            }
         }
         @media only screen and (max-width: 992px) {
             .btn-left{
@@ -322,6 +365,9 @@ form{
                 padding: 3px 10px;
                 float: left;
                 border: none;
+                &:focus{
+                    outline: 0;
+                }
             }
             .btn-right{
                 background: black;
@@ -332,6 +378,9 @@ form{
                 padding: 3px 10px;
                 float: right;
                 border: none;
+                &:focus{
+                    outline: 0;
+                }
             }
         }
         @media only screen and (max-width: 768px) {
@@ -344,6 +393,9 @@ form{
                 padding: 3px 10px;
                 float: left;
                 border: none;
+                &:focus{
+                    outline: 0;
+                }
             }
             .btn-right{
                 background: black;
@@ -354,6 +406,9 @@ form{
                 padding: 3px 10px;
                 float: right;
                 border: none;
+                &:focus{
+                    outline: 0;
+                }
             }
         }
     }
@@ -390,7 +445,7 @@ form{
     display:flex;
     top:0px;
     z-index:10;
-    background-color: white;
+    background-color: rgba(189, 190, 192, 0.3);
     margin: 0px;
     li {
       list-style:none;
@@ -634,7 +689,7 @@ form{
     @media(max-width: 740px){
         ul{
             .active {
-                background-color: rgba(192,192,192,0.5);
+                background-color: white;
             }
         }
     }
@@ -744,12 +799,24 @@ form{
             font-size: 22px;
             padding: 20px 0px;
         }
-        .permute{
+        .text{
             color: black;
+            font-size: 16px;
             cursor: pointer;
             text-transform: capitalize;
         }
     }
+}
+
+.logo-footer{
+    img{
+        width: 30px;
+    }
+}
+
+.row-copyright{
+    border-top: 1px solid grey;
+    padding-top: 10px;
 }
 
 //End footer
@@ -773,7 +840,7 @@ form{
 .mediumnavigation {
     background: rgba(255, 255, 255, 0.97);
     box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.15);
-    padding: 14px 0px 22px 0px;
+    padding: 14px 10px 22px 10px;
 }
 
 .idiom{
@@ -973,6 +1040,8 @@ form{
     }
     .navbar-brand {
       font-weight: 500;
+      position: relative;
+      top: 9px;
     }
     .dropdown-menu {
       border: 1px solid rgba(0, 0, 0, 0.08);
@@ -1275,3 +1344,9 @@ form{
       font-size: 12px;
     }
   }
+
+//Iconos footer
+  .icon-github {
+    background-image: url('../assets/fonts/github.svg'), none;
+  }
+//End Iconos footer

@@ -1,4 +1,4 @@
-<?php require('header.php') ?>
+
 <?php 
     $school1 = $_GET['school1'];
     $school2 = $_GET['school2'];
@@ -132,7 +132,7 @@
                     <div class="img-three-table" style="background-image:url('<?php echo API_URL;?>api/logos/<?php echo $school2?>.png')">
                     </div>
                     <div class="div-select" style="text-align: center;">
-                        <select id="select1" class="custom-select" onchange="change()">
+                        <select id="selectDesktop1" class="custom-select" onchange="changeDesktop()">
                             <option selected><?php echo $school2?></option>
                             <?php
                                 $url = API_URL.'api/schools';
@@ -155,7 +155,7 @@
                     <div class="img-four-table" style="background-image:url('<?php echo API_URL;?>api/logos/<?php echo $school3?>.png')">
                     </div>
                     <div class="div-select" style="text-align: center;">
-                        <select id="select2" class="custom-select" onchange="change()">
+                        <select id="selectDesktop2" class="custom-select" onchange="changeDesktop()">
                             <option selected><?php echo $school3?></option>
                             <?php
                                 $url = API_URL.'api/schools';

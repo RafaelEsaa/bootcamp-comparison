@@ -66,7 +66,8 @@ window.onload = function(){
 
 
 var ids = [];
-function bootcampsSelected(id) {
+function bootcampsSelected(elm) {
+  const id = elm.dataset.target;
   var foundId = ids.find(function(element) {
     return element == id;
   });
@@ -121,5 +122,11 @@ function bootcampsSelected(id) {
 function change(){
   let bootcamp1 = document.getElementById("select1").value;
   let bootcamp2 = document.getElementById("select2").value;
+  window.location.href = "/bootcamp-comparison/compare/4geeks-vs-"+bootcamp1+"-vs-"+bootcamp2;
+}
+
+function changeDesktop(){
+  let bootcamp1 = document.getElementById("selectDesktop1").value;
+  let bootcamp2 = document.getElementById("selectDesktop2").value;
   window.location.href = "/bootcamp-comparison/compare/4geeks-vs-"+bootcamp1+"-vs-"+bootcamp2;
 }
